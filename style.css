@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin: 30px;
+  font-size: 3rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+i {
+  pointer-events: none;
+  color: white;
+}
+
+h2,
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2,
+h3,
+p {
+  color: white;
+}
+
+body {
+  background-color: #262626;
+}
+
+.warning {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 18px 0 red;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  margin: auto;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.warning p {
+  margin: 10px;
+}
+
+.warningButtons {
+  text-align: center;
+}
+
+.headlineArrange {
+  display: flex;
+  flex-direction: row;
+  max-width: 50%;
+  margin: 25px auto;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.taskCard {
+  background: rgba(157, 157, 157, 0.25);
+  box-shadow: 0 8px 32px 0 #ffffff5e;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.taskCard h3 {
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.taskCard:last-child {
+  margin-bottom: 50px;
+}
+
+.doneTaskCard {
+  background: rgba(157, 157, 157, 0.25);
+  box-shadow: 0 8px 16px 0 rgb(51, 118, 51);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.doneTaskCard h3 {
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+.done-delete {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.add {
+  background-color: green;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add:hover,
+.done:hover {
+  background-color: rgb(26, 146, 26);
+}
+
+.delete:hover {
+  background-color: rgb(205, 40, 40);
+}
+
+.add:hover i,
+.done:hover i,
+.delete:hover i {
+  transform: scale(1.2);
+}
+
+.doneTask {
+  display: flex;
+  flex-direction: row;
+  max-width: 50%;
+  margin: 25px auto;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.addDialog {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  margin: auto;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.addForm {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  color: white;
+}
+
+.buttons {
+  align-self: flex-end;
+  text-align: center;
+}
+
+.done,
+.delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  width: 50px;
+  background-color: green;
+  border-radius: 15px;
+}
+
+.delete {
+  background-color: red;
+}

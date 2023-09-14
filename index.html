@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <h1>To do liste</h1>
+
+
+
+        <dialog class="addDialog">
+            <form class="addForm">
+                <label for="titel">Title
+                    <input class="nameInput" name="title" type="text">
+                </label>
+
+                <label for="desc">Description
+                    <textarea class="descText" name="desc" type="text"></textarea>
+                </label>
+
+
+            </form>
+            <div class="buttons">
+                <button value="cancel" class="cancelButton">Cancel</button>
+                <button class="confirmButton">Confirm</button>
+            </div>
+        </dialog>
+
+        <dialog class="warning">
+            <p class="warningText"></p>
+            <div class="warningButtons">
+                <button class="cancelDelete">Cancel</button>
+                <button class="confirmDelete">Confirm</button>
+            </div>
+        </dialog>
+
+        <div class="headlineArrange">
+            <h2>Opgaver</h2>
+
+            <div class="add">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+        </div>
+
+        <div class="taskList">
+
+        </div>
+
+
+        <div class="doneTask">
+            <h2>Færdige Opgaver</h2>
+            <div></div>
+        </div>
+        <div class="doneTaskList">
+
+        </div>
+
+        <template class="buildTemplate">
+
+            <div class="taskCard">
+                <h3 data-field="name">Task name</h3>
+                <p data-field="desc">Task desc</p>
+                <div class="done-delete">
+                    <div data-doneID=1 class="done"><i class="fa-solid fa-check"></i></div>
+                    <div data-deleteID=1 class="delete"><i class="fa-solid fa-minus"></i></div>
+
+                </div>
+            </div>
+
+        </template>
+
+        <template class="doneTemplate">
+            <div class="doneTaskCard">
+                <h3 data-field="doneName">Done task name</h3>
+                <p data-field="doneDesc">Done task desc</p>
+            </div>
+        </template>
+
+    </main>
+
+
+</body>
+
+</html>
