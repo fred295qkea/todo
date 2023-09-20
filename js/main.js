@@ -74,9 +74,6 @@ confirmButton.addEventListener("click", () => {
     ];
   }
 
-  console.log(task);
-  console.log(tasks);
-
   let newTask = JSON.parse(JSON.stringify(task));
 
   tasks.push(newTask);
@@ -170,8 +167,6 @@ function sendDoneTask(array, id) {
       console.log("Done task", doneTask);
       tasks.splice(i, 1);
       doneTasks.unshift(doneTask);
-      // console.log(tasks);
-      // console.log(doneTasks);
 
       document.querySelector(".taskList").innerHTML = "";
       tasks.forEach(build);
@@ -184,14 +179,11 @@ function sendDoneTask(array, id) {
 
       let stringDoneTasks = JSON.stringify(doneTasks);
       localStorage.setItem("doneTasks", stringDoneTasks);
-
-      // console.log(doneTasks);
     }
   }
 }
 
 function buildDone(done) {
-  // console.log("done tasks", done);
   const cloneDone = document.querySelector("template.doneTemplate").content.cloneNode(true);
 
   cloneDone.querySelector("[data-field=doneName]").textContent = done.name;
